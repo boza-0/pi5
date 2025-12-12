@@ -1,0 +1,28 @@
+{
+  "name": "shop-api-backend",
+  "version": "1.0.0",
+  "description": "Backend API for shop database (products, orders, clients, providers)",
+  "author": "Ricardo",
+  "license": "MIT",
+  "keywords": [
+    "express",
+    "mysql",
+    "api",
+    "shop"
+  ],
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

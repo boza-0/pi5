@@ -1,0 +1,10 @@
+{
+  "client_id": 1,
+  "order_status": "pending",
+  "payment_method": "credit_card",
+  "currency_code": "EUR",
+  "discount_amount": 5,
+  "shipping_address": "Calle Mayor 123",
+  "billing_address": "Calle Mayor 123",
+  "notes": "Test order from fixture"
+}

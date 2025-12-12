@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.demo.ui.controllers.OrdersController">
+
+    <!-- Table of orders -->
+    <center>
+        <TableView fx:id="ordersTable" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="orderNumberCol" text="Order #" prefWidth="100"/>
+                <TableColumn fx:id="clientIdCol" text="Client ID" prefWidth="80"/>
+                <TableColumn fx:id="orderDateCol" text="Date" prefWidth="120"/>
+                <TableColumn fx:id="statusCol" text="Status" prefWidth="100"/>
+                <TableColumn fx:id="paymentCol" text="Payment" prefWidth="100"/>
+                <TableColumn fx:id="currencyCol" text="Currency" prefWidth="80"/>
+                <TableColumn fx:id="subtotalCol" text="Subtotal" prefWidth="100"/>
+                <TableColumn fx:id="discountCol" text="Discount" prefWidth="100"/>
+                <TableColumn fx:id="taxCol" text="Tax" prefWidth="100"/>
+                <TableColumn fx:id="totalCol" text="Total" prefWidth="100"/>
+                <TableColumn fx:id="createdAtCol" text="Created At" prefWidth="150"/>
+                <TableColumn fx:id="updatedAtCol" text="Updated At" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Form and buttons -->
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Order #:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="orderNumberField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Client ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="clientIdField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Status:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="statusField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Payment:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="paymentField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Currency:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="currencyField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Shipping Addr:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="shippingField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Billing Addr:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="billingField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Notes:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextArea fx:id="notesArea" prefRowCount="2" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Created At:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <Label fx:id="createdAtLabel" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Updated At:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <Label fx:id="updatedAtLabel" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button fx:id="loadBtn" text="Load" onAction="#onLoad"/>
+                <Button fx:id="addBtn" text="Add" onAction="#onAdd"/>
+                <Button fx:id="updateBtn" text="Update" onAction="#onUpdate"/>
+                <Button fx:id="deleteBtn" text="Delete" onAction="#onDelete"/>
+            </HBox>
+
+            <Label fx:id="statusLabel" style="-fx-text-fill: blue;"/>
+        </VBox>
+    </bottom>
+</BorderPane>

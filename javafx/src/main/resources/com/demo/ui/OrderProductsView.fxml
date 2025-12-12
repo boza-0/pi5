@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.demo.ui.controllers.OrderProductsController">
+
+    <!-- Table of order products -->
+    <center>
+        <TableView fx:id="orderProductsTable" prefHeight="250">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="80"/>
+                <TableColumn fx:id="productIdCol" text="Product ID" prefWidth="80"/>
+                <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="80"/>
+                <TableColumn fx:id="unitPriceCol" text="Unit Price" prefWidth="100"/>
+                <TableColumn fx:id="lineTotalCol" text="Line Total" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Form and buttons -->
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Order ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="orderIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Product ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="productIdField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Quantity:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="quantityField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Unit Price:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="unitPriceField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Line Total:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <Label fx:id="lineTotalLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button fx:id="loadBtn" text="Load" onAction="#onLoad"/>
+                <Button fx:id="addBtn" text="Add" onAction="#onAdd"/>
+                <Button fx:id="updateBtn" text="Update" onAction="#onUpdate"/>
+                <Button fx:id="removeBtn" text="Remove" onAction="#onRemove"/>
+            </HBox>
+
+            <Label fx:id="statusLabel" style="-fx-text-fill: blue;"/>
+        </VBox>
+    </bottom>
+</BorderPane>
