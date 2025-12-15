@@ -35,7 +35,7 @@ Primero, configura el servidor Node.js que proporciona la API para la aplicació
 
 1.  **Navega al directorio del backend:**
     ```bash
-    cd node-backend
+    cd node
     ```
 
 2.  **Crea el archivo de entorno:**
