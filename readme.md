@@ -29,7 +29,7 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
 
 Sigue estos pasos para configurar el proyecto localmente después de clonar el repositorio.
 
-### 1. Configuración del Backend (`node-backend`)
+### 1. Configuración del Backend (`node`)
 
 Primero, configura el servidor Node.js que proporciona la API para la aplicación.
 
@@ -59,7 +59,7 @@ Primero, configura el servidor Node.js que proporciona la API para la aplicació
     npm install
     ```
 
-### 2. Configuración del Frontend (`javafx-client`)
+### 2. Configuración del Frontend (`javafx`)
 
 El frontend es un proyecto de Maven. Todas las dependencias se descargarán automáticamente la primera vez que ejecutes la aplicación. No se requiere ninguna configuración adicional.
 
