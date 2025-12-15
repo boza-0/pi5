@@ -74,7 +74,7 @@ Necesitas ejecutar tanto el backend como el frontend simultáneamente en dos ter
 En tu primera terminal, navega al directorio del backend y ejecuta:
 
 ```bash
-cd node-backend
+cd node
 npm run dev
 ```
 La API se estará ejecutando en `http://localhost:3000`. Mantén esta terminal abierta.
@@ -84,7 +84,7 @@ La API se estará ejecutando en `http://localhost:3000`. Mantén esta terminal a
 En una **terminal nueva y separada**, navega al directorio del frontend y ejecuta:
 
 ```bash
-cd javafx-client
+cd javafx
 mvn javafx:run
 ```
 La ventana de la aplicación JavaFX se iniciará y se conectará al backend en ejecución.
